@@ -369,9 +369,12 @@
 // END Function Declarations
 
 // BEGIN Initialization
+/*
 	if(hideForm == 1) {
 		$('#form').hide();
 	}
+*/
+	$('#keyForm').addClass('hidden');
 
 	var today = new Date();
 	var yesterday = new Date(today.getTime()-1000*60*60*24*1);
