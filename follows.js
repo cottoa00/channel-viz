@@ -455,14 +455,15 @@
 	});
 
 	$('#setFeeds').click(function() {
-		setApiKey($('#apiKeyInput').val());
-		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
-		window.location = 'http://cottoa00.github.io/channel-viz/index.html#key=87ynD20hZioKhBrsFEywmxEVX7nBI2c0794RW2pR6y9c2OpI&feeds=1725370504!2';
+		window.location.replace('http://cottoa00.github.io/channel-viz/index.html#key=87ynD20hZioKhBrsFEywmxEVX7nBI2c0794RW2pR6y9c2OpI&feeds=1725370504!2');
+//		setApiKey($('#apiKeyInput').val());
+//		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
+//		window.location = 'http://cottoa00.github.io/channel-viz/index.html#key=87ynD20hZioKhBrsFEywmxEVX7nBI2c0794RW2pR6y9c2OpI&feeds=1725370504!2';
 //		window.location.href = './index.html#key=87ynD20hZioKhBrsFEywmxEVX7nBI2c0794RW2pR6y9c2OpI&feeds=1725370504!2';
 //		window.location = './index.html#key=87ynD20hZioKhBrsFEywmxEVX7nBI2c0794RW2pR6y9c2OpI&feeds=1725370504!2';
 //		window.location = './index.html#key=' + '87ynD20hZioKhBrsFEywmxEVX7nBI2c0794RW2pR6y9c2OpI' + '&feeds=' + '1725370504!2';
 //		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val();
-		window.location.reload();
+//		window.location.reload();
 		return false;
 	});
 // END Initialization
