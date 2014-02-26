@@ -457,8 +457,8 @@
 	$('#setFeeds').click(function() {
 		setApiKey($('#apiKeyInput').val());
 		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
-		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val();
-//		window.location.replace('./index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val());
+//		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val();
+		window.location.replace('./index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val());
 		window.location.reload();
 		return false;
 	});
