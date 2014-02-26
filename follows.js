@@ -461,7 +461,8 @@
 //		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val();
 		window.location.replace('./index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val());
 		window.location.reload();
-		return false;
+		return true;
+//		return false;
 	});
 // END Initialization
 
