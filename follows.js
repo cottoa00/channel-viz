@@ -147,7 +147,8 @@
 						 			// Build Graph
 									var graph = new Rickshaw.Graph( {
 										element: document.querySelector('#graph-' + feedId + '-' + datastream.id),
-										width: 600,
+//										width: 600,
+										width: 500,
 										height: 200,
 										renderer: 'line',
 										min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
@@ -227,7 +228,8 @@
 			if($('#feed-' + id)) {
 				$('#feed-' + id).remove();
 			}
-			xively.feed.history(id, {  duration: "6hours", interval: 30 }, function (data) {
+//			xively.feed.history(id, {  duration: "6hours", interval: 30 }, function (data) {
+			xively.feed.history(id, {  duration: "1hour", interval: 5 }, function (data) {
 				if(data.id == id) {
 					// Duplicate Example to Build Feed UI
 					$('#exampleFeed').clone().appendTo('#feeds').attr('id', 'feed-' + id).removeClass('hidden');
@@ -456,13 +458,11 @@
 
 	$('#setFeeds').click(function() {
 		setApiKey($('#apiKeyInput').val());
-		feeds = $('#feedsInput').val();
-//		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
+		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 //		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val();
 		window.location.replace('./index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val());
 		window.location.reload();
-		return true;
-//		return false;
+		return false;
 	});
 // END Initialization
 
